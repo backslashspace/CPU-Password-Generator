@@ -24,11 +24,9 @@ internal static partial class Program
             return;
         }
 
-        if (!HandleNativeDll()) return;
-
         if (HWRandom.GetSupportedInstructions() != HWRandom.SupportedInstructions.All)
         {
-            MessageBox.Show("RDSEED and or RDRAND not supported!", "Environment Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            MessageBox.Show("RDSEED not supported!", "Environment Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             return;
         }
 
