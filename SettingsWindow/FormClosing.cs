@@ -15,7 +15,7 @@ internal static partial class Settings
         ClearRegistrySettings();
     }
 
-    // # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+    /********************************************************************/
 
     private unsafe static void ClearRegistrySettings()
     {

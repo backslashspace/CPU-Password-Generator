@@ -57,7 +57,7 @@ internal static partial class MainWindow
         Width = 26,
     };
 
-    // # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+    /********************************************************************/
 
     private static void AddControls(Form mainForm)
     {

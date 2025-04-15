@@ -37,13 +37,13 @@ internal static partial class DwmInterop
         return true;
     }
 
-    // # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
+    /********************************************************************/
 
     [LibraryImport("dwmapi.dll", SetLastError = true)]
     [return: MarshalAs(UnmanagedType.U4)]
     private static unsafe partial UInt32 DwmSetWindowAttribute(IntPtr hwnd, DWMWINDOWATTRIBUTE dwAttribute, UInt32* pvAttribute, UInt32 cbAttribute);
 
-    // # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
+    /********************************************************************/
 
     /// <summary>
     /// Requires OS version 17763 or later  
@@ -89,7 +89,7 @@ internal static partial class DwmInterop
         return DwmSetWindowAttribute(hwnd, DWMWINDOWATTRIBUTE.DWMWA_BORDER_COLOR, &COLORREF, sizeof(UInt32));
     }
 
-    // # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
+    /********************************************************************/
 
     internal static DWM_Dark_Mode_Compatibility_Level DarkModeCompatibilityLevel { get => _darkModeCompatibilityLevel; }
     private static DWM_Dark_Mode_Compatibility_Level _darkModeCompatibilityLevel;

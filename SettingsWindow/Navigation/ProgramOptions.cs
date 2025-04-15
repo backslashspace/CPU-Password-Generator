@@ -23,7 +23,7 @@ internal static partial class Settings
         Font = new(MainWindow.FontFamily!, 9)
     };
 
-    // # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+    /********************************************************************/
 
     private static void AddProgramOptions(Form mainForm)
     {

@@ -3,7 +3,7 @@ using System.Windows.Forms;
 
 internal static partial class Settings
 {
-    private static void CheckBoxChanged(Object? sender, EventArgs e)
+    private unsafe static void CheckBoxChanged(Object? sender, EventArgs e)
     {
         CheckBox checkBox = (CheckBox)sender!;
         Int32 index = (Int32)checkBox.Tag!;
@@ -13,6 +13,10 @@ internal static partial class Settings
             _encoding_base64!.Checked = true;
         }
 
-        CharMap[index] = checkBox.Checked;
+        fixed (Byte* ptr = CharMap)
+        {
+            Boolean intermediate = checkBox.Checked;
+            CharMap[index] = *(Byte*)&intermediate;
+        }
     }
 }

@@ -25,7 +25,7 @@ internal static partial class Settings
         Font = new("Segoe Fluent Icons", 11),
     };
 
-    // # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+    /********************************************************************/
 
     private static void AddPageNavigation(Form mainForm)
     {
@@ -55,7 +55,7 @@ internal static partial class Settings
         AddProgramOptions(mainForm);
     }
 
-    // # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+    /********************************************************************/
 
     private static void PreviousPage(Object? sender, EventArgs e)
     {

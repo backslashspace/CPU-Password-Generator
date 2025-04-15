@@ -57,5 +57,12 @@ internal static partial class Settings
         CheckBoxes['{'].Checked = true;
         CheckBoxes['}'].Checked = true;
         CheckBoxes['~'].Checked = true;
+
+        //
+
+        CheckBoxes['0'].Checked = false;
+        CheckBoxes['O'].Checked = false;
+        CheckBoxes['i'].Checked = false;
+        CheckBoxes['l'].Checked = false;
     }
 }

@@ -34,7 +34,7 @@ internal static partial class Settings
         Font = new(MainWindow.FontFamily!, 9)
     };
 
-    // # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+    /********************************************************************/
 
     private static void AddEncodingOptions(Form mainForm)
     {
@@ -67,7 +67,7 @@ internal static partial class Settings
         encoding.Controls.Add(_encoding_base64_trim);
     }
 
-    // # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+    /********************************************************************/
     private static void Encoding_Raw_CheckedChanged(Object? sender, EventArgs e)
     {
         _encoding_raw!.Tag = true;

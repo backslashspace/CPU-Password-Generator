@@ -9,11 +9,11 @@ internal static partial class MainWindow
     [return: MarshalAs(UnmanagedType.Bool)]
     private static partial Boolean SetProcessDPIAware();
 
-    // # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+    /********************************************************************/
 
     internal static FontFamily? FontFamily;
 
-    // # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+    /********************************************************************/
 
     internal unsafe static void Run()
     {

@@ -7,7 +7,7 @@ internal static partial class MainWindow
 {
     private static String? _generatorOutput;
 
-    // # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+    /********************************************************************/
 
     private static void Generate(Object? sender, EventArgs e)
     {

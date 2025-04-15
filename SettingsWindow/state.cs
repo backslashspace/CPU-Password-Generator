@@ -13,11 +13,11 @@ internal static partial class Settings
         ExtendedCharacters = 2,
     }
 
-    // # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+    /********************************************************************/
 
-    internal static readonly Boolean[] CharMap = new Boolean[256];
+    internal static readonly Byte[] CharMap = new Byte[256];
 
-    // # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+    /********************************************************************/
 
     internal static Boolean ExactLength { get => _exactLength!.Checked; }
     internal static Boolean EncodeBase64 { get => _encoding_base64!.Checked; }
