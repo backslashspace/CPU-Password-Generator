@@ -18,16 +18,18 @@ internal static partial class Generator
     {
         //if (length < 1 || buffer == null) throw new Exception("buffer was null or length was less than 1");
 
-        UInt16 counter = 0;
+        Int32 counter = 0;
 
-    TOP:
-        Vector256<Byte> vector = Avx.LoadVector256(charMapPtr + counter);
-        Vector256<Byte> result = Avx2.CompareEqual(MASK, vector);
+        do
+        {
+            Vector256<Byte> vector = Avx.LoadVector256(charMapPtr + counter);
+            Vector256<Byte> result = Avx2.CompareEqual(MASK, vector);
 
-        if (Avx2.MoveMask(result) != -1) return true;
+            if (result.ExtractMostSignificantBits() != UInt32.MaxValue) return true;
 
-        counter += 32;
-        if (counter < 256) goto TOP;
+            counter += 32;
+        }
+        while (counter < 256);
 
         return false;
     }
